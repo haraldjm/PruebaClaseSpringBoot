@@ -2,29 +2,51 @@ package com.eoi.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * La Clase MySpringBootApplication, clase padre de la aplicaci&oacute;n SpringBoot
+ */
+
 @SpringBootApplication
-@RestController // Prepárate para recibir peticiones HTTP (REST)
+@RestController
 public class MySpringBootApplication {
 
+	/**
+
+	 * The entry point of application.
+
+	 *
+
+	 * @param args the input arguments
+
+	 */
+
 	public static void main(String[] args) {
+
 		SpringApplication.run(MySpringBootApplication.class, args);
+
 	}
 
-	@RequestMapping("/")
-	String hellow(){
-		return "Hello World!";
+	/**
+
+	 * Hello main  string.
+
+	 *
+
+	 * @return  el string por defecto "Main Class" para testear la aplicación
+
+	 */
+
+	@GetMapping("/")
+
+	String helloMain() {
+
+		return "Main class";
+
 	}
 
-	@RequestMapping("/hola")
-	String hellom(){
-		return "Hola Mundo!";
-	}
-	@RequestMapping("/mimedicacion")
-	String mimedicacion(){
-		return "Tomate las pastillas!";
-	}
 
 }
