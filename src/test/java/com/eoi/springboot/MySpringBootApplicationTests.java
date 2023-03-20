@@ -15,9 +15,7 @@ import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 /**
-
  * The type Demo application tests.
-
  */
 @SpringBootTest(classes = MySpringBootApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Log4j2
@@ -26,31 +24,23 @@ class MySpringBootApplicationTests {
 	@Autowired
 	private TestRestTemplate template;
 
-	/**
-
-	 * Hello main.
-
-	 *
-
-	 * @throws Exception the exception
-
-	 */
-	@Test
+    /**
+     * Hello main.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 	void hello_main() throws Exception {
 		ResponseEntity<String> response = template.getForEntity("/", String.class);
 		assertThat(response.getBody()).isEqualTo("Main class");
 	}
 
-	/**
-
-	 * Hello hola.
-
-	 *
-
-	 * @throws Exception the exception
-
-	 */
-	@Test
+    /**
+     * Hello hola.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 	void hello_hola() throws Exception {
 		ResponseEntity<String> response = template.getForEntity("/hola", String.class);
 		assertThat(response.getBody()).isEqualTo("Hola mundo!3");

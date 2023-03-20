@@ -16,7 +16,6 @@ public class Mesa extends Mueble {
     private ComponenteDeMueble tablero;
 
 
-
     /**
      * Instantiates a new Mesa.
      *
