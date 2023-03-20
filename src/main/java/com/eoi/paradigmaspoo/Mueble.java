@@ -78,4 +78,12 @@ public abstract class Mueble extends ObjetoFisico {
             o.showInfo();
         });
     }
+
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
+    }
 }
